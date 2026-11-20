@@ -6,7 +6,8 @@ from src.vehicle.brakes import Brakes
 
 @dataclass
 class VehicleModel:
-        mass: float  
+        mass: float
+        v_max: float  
         aero: Aerodynamics
         powertrain: Powertrain
         tires: Tires
