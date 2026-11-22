@@ -78,7 +78,7 @@ def solver(car: VehicleModel, track: TrackModel, v_o: float):
 
         delta_s = np.diff(track.distance)
         v_avg = 0.5*(v_final[:-1] + v_final[1:])
-        dt = delta_s/max(v_avg,0.01)
+        dt = delta_s/np.maximum(v_avg,0.01)
 
         lap_time = np.sum(dt)
 

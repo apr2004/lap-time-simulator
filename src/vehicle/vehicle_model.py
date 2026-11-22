@@ -25,6 +25,6 @@ class VehicleModel:
         def max_braking_force(self, v: float) -> float:
                 fz = self.calculate_vertical_load(v)
                 f_tire_limit = self.tires.max_grip(fz)
-                f_brake_wheels = self.brakes.freno_max(f_tire_limit)
+                f_brake_wheels = self.brakes.max_braking_force(f_tire_limit)
                 f_drag = self.aero.drag(v)
                 return f_brake_wheels + f_drag
